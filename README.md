@@ -16,14 +16,16 @@ You may want to update the following options in CMakeLists.txt in $root/cmake as
 Add the IfCExtract build target at the end to CMakeLists.txt in /path/to/IfcOpenShell/cmake:
 
       # IfcExtract
-      file(GLOB ELK_CPP_FILES ../src/IfcExtract/*.cpp)
-      file(GLOB ELK_H_FILES ../src/IfcExtract/*.h)
+      file(GLOB ELK_CPP_FILES ../src/ifcextract/*.cpp)
+      file(GLOB ELK_H_FILES ../src/ifcextract/*.h)
       set(ELK_FILES ${ELK_CPP_FILES} ${ELK_H_FILES})
       ADD_EXECUTABLE(IfcExtract ${ELK_FILES})
       if (IFCCONVERT_DOUBLE_PRECISION)
           set_target_properties(IfcExtract PROPERTIES COMPILE_FLAGS -DIFCCONVERT_DOUBLE_PRECISION)
       endif()
       TARGET_LINK_LIBRARIES(IfcExtract ${IFCOPENSHELL_LIBRARIES} ${ICU_LIBRARIES} ${Boost_LIBRARIES})
+
+Copy the files in the src directory to /path/to/IfcOpenShell/src/ifcextract
 
 Then follow the IfcOpenShell build instructions. This will give you the IfCExtract executable.
 
