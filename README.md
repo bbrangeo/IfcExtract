@@ -8,10 +8,10 @@ First download IfcOpenShell and its dependencies.
 
 You may want to update the following options in CMakeLists.txt in $root/cmake as they are not needed by IfcExtract.
 
-OPTION(UNICODE_SUPPORT "Build IfcOpenShell with Unicode support (requires ICU)." OFF)
-OPTION(COLLADA_SUPPORT "Build IfcConvert with COLLADA support (requires OpenCOLLADA)." OFF)
-OPTION(BUILD_IFCPYTHON "Build IfcPython." OFF)
-OPTION(BUILD_EXAMPLES "Build example applications." OFF)
+      OPTION(UNICODE_SUPPORT "Build IfcOpenShell with Unicode support (requires ICU)." OFF)
+      OPTION(COLLADA_SUPPORT "Build IfcConvert with COLLADA support (requires OpenCOLLADA)." OFF)
+      OPTION(BUILD_IFCPYTHON "Build IfcPython." OFF)
+      OPTION(BUILD_EXAMPLES "Build example applications." OFF)
 
 Add the IfCExtract build target at the end to CMakeLists.txt in /path/to/IfcOpenShell/cmake:
 
